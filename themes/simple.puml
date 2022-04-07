@@ -1,0 +1,329 @@
+''
+'' simple
+''
+@startuml simple
+
+!if %not(%variable_exists("$primary"))
+  !$primary = "#666666"
+!endif
+!if %not(%variable_exists("$inverse"))
+  !$inverse = "#ffffff"
+!endif
+!if %not(%variable_exists("$amount_of_light"))
+  !$amount_of_light = 40
+!endif
+!$lighten = %lighten($primary, $amount_of_light)
+
+skinparam Shadowing false
+skinparam FontColor $inverse
+
+skinparam arrow {
+  Color $lighten
+  FontColor $primary
+  Thickness 2
+}
+
+skinparam default {
+  FontColor $inverse
+}
+
+skinparam header {
+  FontColor $primary
+}
+
+skinparam note {
+  FontColor $primary
+  BorderColor $primary
+  BackgroundColor $inverse
+}
+
+skinparam participant {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+  padding 5
+}
+
+skinparam title {
+  FontColor $primary
+}
+
+skinparam CircledCharacter {
+  FontColor $inverse
+  BackgroundColor $primary
+  Radius 9
+}
+
+skinparam activity {
+  BackgroundColor $primary
+  BorderColor $primary
+  FontColor $inverse
+
+  StartColor $lighten
+  EndColor $lighten
+  BarColor $primary
+}
+
+skinparam actor {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam agent {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam artifact {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam boundary {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam box {
+  Padding 10
+}
+
+skinparam card {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam cloud {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam collections {
+  BackgroundColor $inverse
+  BorderColor $primary
+}
+
+skinparam component {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam control {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam database {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam entity {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam file {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam folder {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam frame {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam hexagon {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam interface {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam label {
+  FontColor $primary
+}
+
+skinparam node {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam package {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam person {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam queue {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam rectangle {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam stack {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam storage {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+}
+
+skinparam sequence {
+  delay {
+    FontColor $primary
+  }
+
+  divider {
+    BackgroundColor $inverse
+    BorderColor $lighten
+    FontColor $primary
+    BorderThickness 2
+  }
+
+  group {
+    header {
+      FontColor $primary
+    }
+
+    BackgroundColor $inverse
+    BodyBackgroundColor $inverse
+
+    BorderColor $lighten
+    BorderThickness 2
+  }
+
+  lifeline {
+    BorderColor $lighten
+    BackgroundColor $inverse
+  }
+
+  message {
+    Alignment center
+    TextAlignment center
+  }
+
+  reference {
+    BackgroundColor $inverse
+    BorderColor $lighten
+    HeaderBackgroundColor $inverse
+    FontColor $primary
+  }
+}
+
+skinparam usecase {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+
+  stereotype {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+}
+
+skinparam class {
+  BackgroundColor $inverse
+  BorderColor $primary
+  FontColor $primary
+
+  attribute {
+    FontColor $primary
+  }
+
+  stereotype {
+    FontColor $inverse
+  }
+}
+
+skinparam stereotype {
+  a {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+  c {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+  e {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+  i {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+  n {
+    BackgroundColor $primary
+    BorderColor $primary
+  }
+}
+
+skinparam state {
+  BackgroundColor $inverse
+  BorderColor $lighten
+  FontColor $primary
+  StartColor $lighten
+  EndColor $lighten
+}
+
+skinparam icon {
+  public {
+    Color $primary
+    BackgroundColor $primary
+  }
+  protected {
+    Color $primary
+    BackgroundColor $primary
+  }
+  package {
+    Color $primary
+    BackgroundColor $primary
+  }
+  private {
+    Color $primary
+    BackgroundColor $primary
+  }
+}
+
+@enduml
